@@ -9,12 +9,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MovieController {
-    static final String SQL_CONN_STRING = "jdbc:mysql://localhost:3306/movieapp";
+    static final String SQL_CONN_STRING = "jdbc:mariadb://localhost:3306/movieapp";
     static final String USER = "user1";
     static final String PASS = "pass";
 
     public static void handlePopularMovies(Context ctx){
-        String maxResults = ctx.queryParam("limit", "6");
+        String maxResults = ctx.queryParam("limit");
+        if(maxResults==null)
+            maxResults="6";
         try {
             int limit = Integer.parseInt(maxResults);
             ctx.json(getPopularMovies(limit));
@@ -28,7 +30,9 @@ public class MovieController {
     }
 
     public static void handleSearchMovies(Context ctx){
-        String maxResults = ctx.queryParam("limit", "6");
+        String maxResults = ctx.queryParam("limit");
+        if(maxResults==null)
+            maxResults="6";
         String searchParam = ctx.queryParam("q");
         if(searchParam == null){
             ctx.status(400);
