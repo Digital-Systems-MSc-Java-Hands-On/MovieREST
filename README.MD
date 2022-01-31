@@ -17,7 +17,7 @@ Hands-on demo (Part 3) project to showcase the building of a simple Javalin REST
 <dependency>
     <groupId>org.mariadb.jdbc</groupId>
     <artifactId>mariadb-java-client</artifactId>
-    <version>2.7.1</version>
+    <version>3.0.3</version>
 </dependency>
 ```
 - Jackson JSON
@@ -25,7 +25,7 @@ Hands-on demo (Part 3) project to showcase the building of a simple Javalin REST
 <dependency>
     <groupId>com.fasterxml.jackson.core</groupId>
     <artifactId>jackson-databind</artifactId>
-    <version>2.10.3</version>
+    <version>2.13.1</version>
 </dependency>
 ```
 
@@ -48,7 +48,7 @@ Hands-on demo (Part 3) project to showcase the building of a simple Javalin REST
 <dependency>
     <groupId>io.javalin</groupId>
     <artifactId>javalin</artifactId>
-    <version>3.13.0</version>
+    <version>4.3.0</version>
 </dependency>
 ```
 
